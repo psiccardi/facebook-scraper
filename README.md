@@ -27,7 +27,7 @@ Suppose you have an URL like 'https://site-to-be-scraped.com/listing/?page={NUMB
     4. https://site-to-be-scraped.com/listing/?page=4
     5. https://site-to-be-scraped.com/listing/?page=5
 
-  It's important to change also the values of the selectors at [this line](https://github.com/psiccardi/facebook-scraper/blob/master/app/scraper.js#L633), and maybe a bunch of lines of code in the method parseContentPage.
+  It's important to change also the values of the selectors at [this line](https://github.com/psiccardi/facebook-scraper/blob/master/app/lib/utils.js#L633), and maybe a bunch of lines of code in the method parseContentPage.
   My personal advice is to use this method only if you know exactly what you're doing. 
   * **csv**: with this method you specify a list of URLs containing the Facebook Comment Widget.
 * **start**: specifies where to start. What this parameter means depends on the method: if the method is **scrape**, it refers to the pagination parameter value in the URL **CONTENTS_URL**, if the method is **csv**, it refers to the first row of the csv you want to start with.
