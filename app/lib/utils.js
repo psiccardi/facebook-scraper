@@ -133,9 +133,9 @@ module.exports.printColored = printColored;
  * @return undefined
  */
 const printHelp = () => {
-	printColored('*****************************', ['bgGreen', 'fgWhite']);
-	printColored('*   EBAH COMMENTS SCRAPER   *', ['bgGreen', 'fgWhite']);
-	printColored('*****************************', ['bgGreen', 'fgWhite']);
+	printColored('*********************************', ['bgGreen', 'fgWhite']);
+	printColored('*   FACEBOOK COMMENTS SCRAPER   *', ['bgGreen', 'fgWhite']);
+	printColored('*********************************', ['bgGreen', 'fgWhite']);
 
 	printColored('Usage:\n','fgGreen'); 
 	printColored('node scraper.js [arg1=value1 ... argN=valueN]\n', 'fgWhite')
@@ -150,7 +150,7 @@ const printHelp = () => {
 	printColored('		scrape')
 	printColored('	VALID VALUES:', 'fgGreen')
 	printColored('		- scrape', 'fgGreen')
-	printColored('		Scraping starts from https://www.ebah.com.br/content?start={NUMBER},')
+	printColored('		Scraping starts from <YOUR_URL_HERE>/?parameter={NUMBER},')
 	printColored('		where NUMBER is specified by argument "start" (1 is the default).')
 	printColored('		It starts from that URL and follow the next pagination in a loop.')
 	printColored('		With this method the script retrieves document URLs and then fetches the comments.')
@@ -164,7 +164,7 @@ const printHelp = () => {
 	printColored('	EXAMPLES:', 'fgGreen')
 	printColored('		node scraper.js method=scrape')
 	printColored('		node scraper.js method=scrape start=2')
-	printColored('		node scraper.js method=csv file=ebah-documents.csv\n')
+	printColored('		node scraper.js method=csv file=pages-to-scrape.csv\n')
 
 	/* START */
 
@@ -176,7 +176,7 @@ const printHelp = () => {
 	printColored('		1')
 	printColored('	EXAMPLES:', 'fgGreen')
 	printColored('		node scraper.js method=scrape start=3')
-	printColored('		node scraper.js method=csv file=ebah-documents.csv start=2\n')
+	printColored('		node scraper.js method=csv file=pages-to-scrape.csv start=2\n')
 
 	/* END */
 
@@ -188,7 +188,7 @@ const printHelp = () => {
 	printColored('	DEFAULT:', 'fgGreen')
 	printColored('		1')
 	printColored('	EXAMPLES:', 'fgGreen')
-	printColored('		node scraper.js method=csv file=ebah-documents.csv start=2 end=10\n')
+	printColored('		node scraper.js method=csv file=pages-to-scrape.csv start=2 end=10\n')
 
 	/* FILE */
 
@@ -197,7 +197,7 @@ const printHelp = () => {
 	printColored('		Specifies the csv file with document URLs to be parsed.')
 	printColored('		To be used in conjunction with "method=csv"')
 	printColored('	EXAMPLES:', 'fgGreen')
-	printColored('		node scraper.js method=csv file=ebah-documents.csv\n')
+	printColored('		node scraper.js method=csv file=pages-to-scrape.csv\n')
 
 	/* COMMENTS FILE */
 
@@ -207,7 +207,7 @@ const printHelp = () => {
 	printColored('	DEFAULT:', 'fgGreen')
 	printColored('		doc-comments.csv')
 	printColored('	EXAMPLES:', 'fgGreen')
-	printColored('		node scraper.js method=csv outputfile=outputfile.csv file=ebah-documents.csv\n')
+	printColored('		node scraper.js method=csv outputfile=outputfile.csv file=pages-to-scrape.csv\n')
 
 	/* PAGE-ERROR FILE */
 
@@ -218,7 +218,7 @@ const printHelp = () => {
 	printColored('	DEFAULT:', 'fgGreen')
 	printColored('		doc-comments.csv')
 	printColored('	EXAMPLES:', 'fgGreen')
-	printColored('		node scraper.js method=csv errorfile=errorfile.csv outputfile=outputfile.csv file=ebah-documents.csv\n')
+	printColored('		node scraper.js method=csv errorfile=errorfile.csv outputfile=outputfile.csv file=pages-to-scrape.csv\n')
 
 	process.exit(0);
 }
