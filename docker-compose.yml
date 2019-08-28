@@ -1,0 +1,11 @@
+version: "2"
+services:
+  scraper:
+    container_name: scraper
+    build: images/scraper
+    volumes:
+      - ./app:/app
+      - ./images/scraper/package.json:/app/package.json
+      - /app/node_modules
+    ports:
+      - "4000:4000"
